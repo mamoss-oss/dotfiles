@@ -1,0 +1,7 @@
+[[language]]
+name = "rust"
+file-types = ["rs"]
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+

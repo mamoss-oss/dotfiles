@@ -1,0 +1,83 @@
+theme = "tokyonight_storm" #"base16_transparent"
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+J = ["delete_selection", "paste_after"]
+K = ["delete_selection", "move_line_up", "paste_before"]
+C-s = ":w"
+C-u = ["half_page_up", "align_view_center"]
+C-d = ["half_page_down", "align_view_center"]
+
+[keys.normal.g]
+x = ":buffer-close"
+j = "jump_backward"
+k = "jump_forward"
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
+
+[keys.normal."["]
+"[" = "goto_previous_buffer"
+
+[keys.normal."]"]
+"]" = "goto_next_buffer" 
+
+[editor]
+#line-number = "relative"
+bufferline = "always"
+completion-replace = true
+completion-trigger-len = 1
+shell = ["zsh", "-c"]
+scrolloff = 10
+cursorline = true
+color-modes = true
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[editor.soft-wrap]
+enable = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = [
+"mode",
+"spacer",
+"version-control",
+"spacer",
+"separator",
+"file-name",
+"file-modification-indicator"
+]
+right = [
+"spinner",
+"spacer",
+"workspace-diagnostics",
+"separator",
+"spacer",
+"diagnostics",
+"position",
+"file-encoding",
+"file-line-ending",
+"file-type"
+]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+auto-signature-help = true
+display-signature-help-docs = true
+
+[editor.indent-guides]
+render = true
+character = "|" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+#[editor.gutters.line-numbers]
+#min-width = 1
